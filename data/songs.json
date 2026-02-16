@@ -1,0 +1,227 @@
+[
+  {
+    "id": 1,
+    "artist": 1,
+    "name": "DtMF"
+  },
+  {
+    "id": 2,
+    "artist": 1,
+    "name": "NUEVAYoL"
+  },
+  {
+    "id": 3,
+    "artist": 2,
+    "name": "Stateside + Zara Larsson"
+  },
+  {
+    "id": 4,
+    "artist": 1,
+    "name": "BAILE INoLVIDABLE"
+  },
+  {
+    "id": 5,
+    "artist": 3,
+    "name": "Opalite"
+  },
+  {
+    "id": 6,
+    "artist": 4,
+    "name": "Fame Is a Gun"
+  },
+  {
+    "id": 7,
+    "artist": 1,
+    "name": "VOY A LLeVARTE PA PR"
+  },
+  {
+    "id": 8,
+    "artist": 1,
+    "name": "EoO"
+  },
+  {
+    "id": 9,
+    "artist": 13,
+    "name": "Aperture"
+  },
+  {
+    "id": 10,
+    "artist": 11,
+    "name": "Sienna"
+  },
+  {
+    "id": 11,
+    "artist": 14,
+    "name": "WILDFLOWER"
+  },
+  {
+    "id": 12,
+    "artist": 15,
+    "name": "The Less I Know the Better"
+  },
+  {
+    "id": 13,
+    "artist": 9,
+    "name": "Lush Life"
+  },
+  {
+    "id": 14,
+    "artist": 16,
+    "name": "Creep"
+  },
+  {
+    "id": 15,
+    "artist": 6,
+    "name": "Tears"
+  },
+  {
+    "id": 16,
+    "artist": 17,
+    "name": "4 Raws"
+  },
+  {
+    "id": 17,
+    "artist": 1,
+    "name": "VeLDÁ"
+  },
+  {
+    "id": 18,
+    "artist": 14,
+    "name": "BIRDS OF A FEATHER"
+  },
+  {
+    "id": 19,
+    "artist": 18,
+    "name": "I Thought I Saw Your Face Today"
+  },
+  {
+    "id": 20,
+    "artist": 19,
+    "name": "luther (with SZA)"
+  },
+  {
+    "id": 21,
+    "artist": 16,
+    "name": "Let Down"
+  },
+  {
+    "id": 22,
+    "artist": 15,
+    "name": "Dracula"
+  },
+  {
+    "id": 23,
+    "artist": 1,
+    "name": "WELTiTA"
+  },
+  {
+    "id": 24,
+    "artist": 20,
+    "name": "505"
+  },
+  {
+    "id": 25,
+    "artist": 21,
+    "name": "Gabriela"
+  },
+  {
+    "id": 26,
+    "artist": 2,
+    "name": "PIXELATED KISSES"
+  },
+  {
+    "id": 27,
+    "artist": 1,
+    "name": "Tití Me Preguntó"
+  },
+  {
+    "id": 28,
+    "artist": 1,
+    "name": "PERFuMITO NUEVO"
+  },
+  {
+    "id": 29,
+    "artist": 3,
+    "name": "Flashing Lights"
+  },
+  {
+    "id": 30,
+    "artist": 4,
+    "name": "Duvet"
+  },
+  {
+    "id": 31,
+    "artist": 5,
+    "name": "Lovers Rock"
+  },
+  {
+    "id": 32,
+    "artist": 6,
+    "name": "Espresso"
+  },
+  {
+    "id": 33,
+    "artist": 6,
+    "name": "Sports car"
+  },
+  {
+    "id": 34,
+    "artist": 0,
+    "name": "12 to 12"
+  },
+  {
+    "id": 35,
+    "artist": 2,
+    "name": "LAST OF A DYING BREED"
+  },
+  {
+    "id": 36,
+    "artist": 1,
+    "name": "KLOuFRENS"
+  },
+  {
+    "id": 37,
+    "artist": 2,
+    "name": "The Subway"
+  },
+  {
+    "id": 38,
+    "artist": 7,
+    "name": "E85"
+  },
+  {
+    "id": 39,
+    "artist": 8,
+    "name": "Von dutch"
+  },
+  {
+    "id": 40,
+    "artist": 29,
+    "name": "Lover, You Should\"ve Come Over"
+  },
+  {
+    "id": 41,
+    "artist": 3,
+    "name": "Anti-Hero (Acoustic)"
+  },
+  {
+    "id": 42,
+    "artist": 4,
+    "name": "What Was I Made For?"
+  },
+  {
+    "id": 43,
+    "artist": 0,
+    "name": "Do I Wanna Know?"
+  },
+  {
+    "id": 44,
+    "artist": 9,
+    "name": "HUMBLE."
+  },
+  {
+    "id": 46,
+    "title": "Bad bloodier",
+    "artist": 30
+  }
+]
