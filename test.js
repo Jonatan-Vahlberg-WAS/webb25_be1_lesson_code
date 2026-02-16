@@ -87,9 +87,21 @@ async function deleteSong(id) {
     return data;
 }
 
+async function getAllAlbums() {
+    const response = await fetch('http://localhost:3000/api/albums');
+    const data = await response.json();
+    return data;
+}
+
 async function main() {
     const artists = await getAllArtists();
     console.log("All artists:", artists);
+    console.log("--------------------------------");
+    const albums = await getAllAlbums();
+    console.log("All albums:", albums);
+    console.log("--------------------------------");
+    const songs = await getAllSongs();
+    console.log("All songs:", songs);
 
     // const newArtist = await createArtist('Taylor Swift');
     // console.log("New artist created:", newArtist);
@@ -102,10 +114,9 @@ async function main() {
 
 
 
+
     console.log("--------------------------------");
 
-    const songs = await getAllSongs();
-    console.log("All songs:", songs);
 
     // const newSong = await createSong('Bad blood', updatedArtist.id);
     // console.log("New song created:", newSong);

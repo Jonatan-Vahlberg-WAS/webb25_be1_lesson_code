@@ -1,227 +1,56 @@
 [
-  {
-    "id": 1,
-    "artist": 1,
-    "name": "DtMF"
-  },
-  {
-    "id": 2,
-    "artist": 1,
-    "name": "NUEVAYoL"
-  },
-  {
-    "id": 3,
-    "artist": 2,
-    "name": "Stateside + Zara Larsson"
-  },
-  {
-    "id": 4,
-    "artist": 1,
-    "name": "BAILE INoLVIDABLE"
-  },
-  {
-    "id": 5,
-    "artist": 3,
-    "name": "Opalite"
-  },
-  {
-    "id": 6,
-    "artist": 4,
-    "name": "Fame Is a Gun"
-  },
-  {
-    "id": 7,
-    "artist": 1,
-    "name": "VOY A LLeVARTE PA PR"
-  },
-  {
-    "id": 8,
-    "artist": 1,
-    "name": "EoO"
-  },
-  {
-    "id": 9,
-    "artist": 13,
-    "name": "Aperture"
-  },
-  {
-    "id": 10,
-    "artist": 11,
-    "name": "Sienna"
-  },
-  {
-    "id": 11,
-    "artist": 14,
-    "name": "WILDFLOWER"
-  },
-  {
-    "id": 12,
-    "artist": 15,
-    "name": "The Less I Know the Better"
-  },
-  {
-    "id": 13,
-    "artist": 9,
-    "name": "Lush Life"
-  },
-  {
-    "id": 14,
-    "artist": 16,
-    "name": "Creep"
-  },
-  {
-    "id": 15,
-    "artist": 6,
-    "name": "Tears"
-  },
-  {
-    "id": 16,
-    "artist": 17,
-    "name": "4 Raws"
-  },
-  {
-    "id": 17,
-    "artist": 1,
-    "name": "VeLDÁ"
-  },
-  {
-    "id": 18,
-    "artist": 14,
-    "name": "BIRDS OF A FEATHER"
-  },
-  {
-    "id": 19,
-    "artist": 18,
-    "name": "I Thought I Saw Your Face Today"
-  },
-  {
-    "id": 20,
-    "artist": 19,
-    "name": "luther (with SZA)"
-  },
-  {
-    "id": 21,
-    "artist": 16,
-    "name": "Let Down"
-  },
-  {
-    "id": 22,
-    "artist": 15,
-    "name": "Dracula"
-  },
-  {
-    "id": 23,
-    "artist": 1,
-    "name": "WELTiTA"
-  },
-  {
-    "id": 24,
-    "artist": 20,
-    "name": "505"
-  },
-  {
-    "id": 25,
-    "artist": 21,
-    "name": "Gabriela"
-  },
-  {
-    "id": 26,
-    "artist": 2,
-    "name": "PIXELATED KISSES"
-  },
-  {
-    "id": 27,
-    "artist": 1,
-    "name": "Tití Me Preguntó"
-  },
-  {
-    "id": 28,
-    "artist": 1,
-    "name": "PERFuMITO NUEVO"
-  },
-  {
-    "id": 29,
-    "artist": 3,
-    "name": "Flashing Lights"
-  },
-  {
-    "id": 30,
-    "artist": 4,
-    "name": "Duvet"
-  },
-  {
-    "id": 31,
-    "artist": 5,
-    "name": "Lovers Rock"
-  },
-  {
-    "id": 32,
-    "artist": 6,
-    "name": "Espresso"
-  },
-  {
-    "id": 33,
-    "artist": 6,
-    "name": "Sports car"
-  },
-  {
-    "id": 34,
-    "artist": 0,
-    "name": "12 to 12"
-  },
-  {
-    "id": 35,
-    "artist": 2,
-    "name": "LAST OF A DYING BREED"
-  },
-  {
-    "id": 36,
-    "artist": 1,
-    "name": "KLOuFRENS"
-  },
-  {
-    "id": 37,
-    "artist": 2,
-    "name": "The Subway"
-  },
-  {
-    "id": 38,
-    "artist": 7,
-    "name": "E85"
-  },
-  {
-    "id": 39,
-    "artist": 8,
-    "name": "Von dutch"
-  },
-  {
-    "id": 40,
-    "artist": 29,
-    "name": "Lover, You Should\"ve Come Over"
-  },
-  {
-    "id": 41,
-    "artist": 3,
-    "name": "Anti-Hero (Acoustic)"
-  },
-  {
-    "id": 42,
-    "artist": 4,
-    "name": "What Was I Made For?"
-  },
-  {
-    "id": 43,
-    "artist": 0,
-    "name": "Do I Wanna Know?"
-  },
-  {
-    "id": 44,
-    "artist": 9,
-    "name": "HUMBLE."
-  },
-  {
-    "id": 46,
-    "title": "Bad bloodier",
-    "artist": 30
-  }
+  {"artistId": 1, "title": "DtMF", "durationSeconds": 237, "playcount": 12124362, "listeners": 1010468, "albumId": 2},
+  {"artistId": 1, "title": "NUEVAYoL", "durationSeconds": 183, "playcount": 9227326, "listeners": 800583, "albumId": 2},
+  {"artistId": 2, "title": "Stateside + Zara Larsson", "durationSeconds": 176, "playcount": 7596071, "listeners": 620552, "albumId": 3},
+  {"artistId": 1, "title": "BAILE INoLVIDABLE", "durationSeconds": 367, "playcount": 9569942, "listeners": 733372, "albumId": 2},
+  {"artistId": 3, "title": "Opalite", "durationSeconds": 235, "playcount": 12250095, "listeners": 673700, "albumId": 4},
+  {"artistId": 4, "title": "Fame Is a Gun", "durationSeconds": 183, "playcount": 15940114, "listeners": 885366, "albumId": 5},
+  {"artistId": 1, "title": "VOY A LLeVARTE PA PR", "durationSeconds": 204, "playcount": 7550784, "listeners": 622907, "albumId": 2},
+  {"artistId": 1, "title": "EoO", "durationSeconds": 204, "playcount": 7376978, "listeners": 608104, "albumId": 2},
+  {"artistId": 5, "title": "End of Beginning", "durationSeconds": 159, "playcount": 31449067, "listeners": 1898696, "albumId": 6},
+  {"artistId": 6, "title": "Manchild", "durationSeconds": 213, "playcount": 20726530, "listeners": 1129648, "albumId": 7},
+  {"artistId": 7, "title": "Man I Need", "durationSeconds": 184, "playcount": 7004554, "listeners": 723107, "albumId": 8},
+  {"artistId": 8, "title": "WHERE IS MY HUSBAND!", "durationSeconds": 196, "playcount": 8102749, "listeners": 815760, "albumId": 9},
+  {"artistId": 9, "title": "Midnight Sun", "durationSeconds": 189, "playcount": 8275684, "listeners": 527654, "albumId": 10},
+  {"artistId": 7, "title": "So Easy (To Fall In Love)", "durationSeconds": 170, "playcount": 5879677, "listeners": 699660, "albumId": 8},
+  {"artistId": 3, "title": "The Fate of Ophelia", "durationSeconds": 226, "playcount": 21494557, "listeners": 941110, "albumId": 4},
+  {"artistId": 10, "title": "back to friends", "durationSeconds": 199, "playcount": 21499022, "listeners": 1305590, "albumId": 11},
+  {"artistId": 11, "title": "No One Noticed", "durationSeconds": 236, "playcount": 30429397, "listeners": 1480035, "albumId": 12},
+  {"artistId": 12, "title": "Good Luck, Babe!", "durationSeconds": 218, "playcount": 57136264, "listeners": 2009749, "albumId": 13},
+  {"artistId": 13, "title": "Aperture", "durationSeconds": 311, "playcount": 2653089, "listeners": 437485, "albumId": 14},
+  {"artistId": 11, "title": "Sienna", "durationSeconds": 224, "playcount": 17515037, "listeners": 1083097, "albumId": 12},
+  {"artistId": 14, "title": "WILDFLOWER", "durationSeconds": 261, "playcount": 33911896, "listeners": 1562914, "albumId": 15},
+  {"artistId": 15, "title": "The Less I Know the Better", "durationSeconds": 217, "playcount": 45761290, "listeners": 2648161, "albumId": 16},
+  {"artistId": 9, "title": "Lush Life", "durationSeconds": 201, "playcount": 11998517, "listeners": 1347431, "albumId": 10},
+  {"artistId": 16, "title": "Creep", "durationSeconds": 235, "playcount": 57490366, "listeners": 3979194, "albumId": 18},
+  {"artistId": 6, "title": "Tears", "durationSeconds": 160, "playcount": 13421859, "listeners": 937121, "albumId": 7},
+  {"artistId": 17, "title": "4 Raws", "durationSeconds": 147, "playcount": 7034286, "listeners": 599247, "albumId": 20},
+  {"artistId": 1, "title": "VeLDÁ", "durationSeconds": null, "playcount": 5551848, "listeners": 475280, "albumId": 2},
+  {"artistId": 14, "title": "BIRDS OF A FEATHER", "durationSeconds": 183, "playcount": 53220164, "listeners": 2144933, "albumId": 15},
+  {"artistId": 18, "title": "I Thought I Saw Your Face Today", "durationSeconds": 185, "playcount": 5938693, "listeners": 764807, "albumId": 21},
+  {"artistId": 19, "title": "luther (with SZA)", "durationSeconds": null, "playcount": 26282958, "listeners": 1469739, "albumId": 22},
+  {"artistId": 16, "title": "Let Down", "durationSeconds": 337, "playcount": 37752378, "listeners": 2418066, "albumId": 19},
+  {"artistId": 15, "title": "Dracula", "durationSeconds": 205, "playcount": 7354561, "listeners": 811315, "albumId": 17},
+  {"artistId": 1, "title": "WELTiTA", "durationSeconds": null, "playcount": 4024931, "listeners": 441160, "albumId": 2},
+  {"artistId": 20, "title": "505", "durationSeconds": 305, "playcount": 55379462, "listeners": 2921008, "albumId": 23},
+  {"artistId": 21, "title": "Gabriela", "durationSeconds": 197, "playcount": 15763004, "listeners": 911589, "albumId": 24},
+  {"artistId": 22, "title": "PIXELATED KISSES", "durationSeconds": 110, "playcount": 7954857, "listeners": 449492, "albumId": 25},
+  {"artistId": 1, "title": "Tití Me Preguntó", "durationSeconds": 117, "playcount": 10075951, "listeners": 772697, "albumId": 1},
+  {"artistId": 1, "title": "PERFuMITO NUEVO", "durationSeconds": null, "playcount": 3705610, "listeners": 417252, "albumId": 2},
+  {"artistId": 23, "title": "Flashing Lights", "durationSeconds": 237, "playcount": 35147129, "listeners": 2122950, "albumId": 26},
+  {"artistId": 24, "title": "Duvet", "durationSeconds": 203, "playcount": 38814782, "listeners": 1892590, "albumId": 27},
+  {"artistId": 25, "title": "Lovers Rock", "durationSeconds": 213, "playcount": 47949504, "listeners": 2089268, "albumId": 28},
+  {"artistId": 6, "title": "Espresso", "durationSeconds": 175, "playcount": 53224676, "listeners": 2096809, "albumId": 7},
+  {"artistId": 26, "title": "Sports car", "durationSeconds": 165, "playcount": 20215915, "listeners": 871052, "albumId": 29},
+  {"artistId": 10, "title": "12 to 12", "durationSeconds": 242, "playcount": 7448683, "listeners": 691746, "albumId": 11},
+  {"artistId": 22, "title": "LAST OF A DYING BREED", "durationSeconds": 149, "playcount": 931892, "listeners": 193148, "albumId": 25},
+  {"artistId": 1, "title": "KLOuFRENS", "durationSeconds": 290, "playcount": 4312793, "listeners": 404662, "albumId": 2},
+  {"artistId": 12, "title": "The Subway", "durationSeconds": 252, "playcount": 15376946, "listeners": 892822, "albumId": 13},
+  {"artistId": 27, "title": "E85", "durationSeconds": null, "playcount": 799400, "listeners": 173333, "albumId": 30},
+  {"artistId": 28, "title": "Von dutch", "durationSeconds": 164, "playcount": 30059883, "listeners": 1381578, "albumId": 31},
+  {"artistId": 29, "title": "Lover, You Should've Come Over", "durationSeconds": 403, "playcount": 28912474, "listeners": 1540300, "albumId": 32},
+  {"artistId": 3, "title": "Anti-Hero (Acoustic)", "durationSeconds": 185, "playcount": 8923412, "listeners": 521000, "albumId": null},
+  {"artistId": 14, "title": "What Was I Made For?", "durationSeconds": 220, "playcount": 28472918, "listeners": 1523000, "albumId": null},
+  {"artistId": 20, "title": "Do I Wanna Know?", "durationSeconds": 272, "playcount": 41258391, "listeners": 2281900, "albumId": null},
+  {"artistId": 19, "title": "HUMBLE.", "durationSeconds": 177, "playcount": 38927456, "listeners": 2156000, "albumId": null}
 ]

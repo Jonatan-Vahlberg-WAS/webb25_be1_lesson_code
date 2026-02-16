@@ -13,6 +13,27 @@ const songSchema = new mongoose.Schema({
         toJSON: { virtuals: true },
         toObject: { virtuals: true },
     },
+    album: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Album',
+        required: false,
+        default: null,
+    },
+    durationSeconds: {
+        type: Number,
+        required: false,
+        default: null,
+    },
+    playcount: {
+        type: Number,
+        required: false,
+        default: null,
+    },
+    listeners: {
+        type: Number,
+        required: false,
+        default: null,
+    },
 }, { timestamps: true, toJSON: { virtuals: true }, toObject: { virtuals: true } });
 
 songSchema.virtual('artistName').get(function() {
