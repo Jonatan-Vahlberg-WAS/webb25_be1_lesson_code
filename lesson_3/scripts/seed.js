@@ -42,7 +42,7 @@ async function seedSongs(artistIdMap) {
             const mongoArtistId = artistIdMap[song.artist];
             if (mongoArtistId) {
                 const songTitle = song.title ?? song.name;
-                if (songTitle) seedSongs.push({ title: songTitle, artist: mongoArtistId });
+                if (songTitle) seedSongs.push({ name: songTitle, artist: mongoArtistId });
             }
         }
         await Song.insertMany(seedSongs);

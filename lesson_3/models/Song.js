@@ -1,11 +1,11 @@
 import mongoose from 'mongoose';
 
 const songSchema = new mongoose.Schema({
-    title: { 
+    name: { 
         type: String,
         required: true,
         trim: true,
-        minLength: [3, 'Title must be at least 3 characters long'],
+        minLength: [3, 'Name must be at least 3 characters long'],
     },
     artist: {
         type: mongoose.Schema.Types.ObjectId,

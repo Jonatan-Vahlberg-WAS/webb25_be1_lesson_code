@@ -9,9 +9,9 @@ export async function getSongById(id) {
   return song || null;
 }
 
-export async function createSong(title, artistId) {
+export async function createSong(name, artistId) {
   const song = new Song({
-    title,
+    name,
     artist: artistId
   });
 
@@ -19,8 +19,8 @@ export async function createSong(title, artistId) {
   return song;
 }
 
-export async function updateSong(id, title, artistId) {
-  const song = await Song.findByIdAndUpdate(id, { title, artist: artistId }, { new: true }).populate("artist");
+export async function updateSong(id, name, artistId) {
+  const song = await Song.findByIdAndUpdate(id, { name, artist: artistId }, { new: true }).populate("artist");
   return song || null;
 }
 
