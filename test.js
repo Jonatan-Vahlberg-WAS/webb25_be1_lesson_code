@@ -1,29 +1,64 @@
-async function main() {
-  const r1 = await fetch('http://localhost:3000/api/artists');
-  const data1 = await r1.json();
-  console.log("All artists:", data1);
+//Simulating the API calls 
+async function getAllArtists() {
+  const response = await fetch('http://localhost:3000/api/artists');
+  const data1 = await response.json();
+  return data1;
+}
 
-  const newArtist = { name: 'Taylor Swift' };
-  const r2 = await fetch('http://localhost:3000/api/artists', {
+async function createArtist(name) {
+  const response = await fetch('http://localhost:3000/api/artists', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
     },
-    body: JSON.stringify(newArtist),
+    body: JSON.stringify({ name }),
   });
-  const data2 = await r2.json();
-  const newArtistId = data2.id;
-  console.log("New artist created:", data2);
+  const data = await response.json();
+  return data;
+}
 
-  const r3 = await fetch(`http://localhost:3000/api/artists/${newArtistId}`);
-  const data3 = await r3.json();
-  console.log("New artist: found", data3);
-  
-  const r4 = await fetch(`http://localhost:3000/api/artists/999`, {
-    method: 'GET',
+async function getArtistById(id) {
+  const response = await fetch(`http://localhost:3000/api/artists/${id}`);
+  const data = await response.json();
+  return data;
+}
+
+async function updateArtist(id, name) {
+  const response = await fetch(`http://localhost:3000/api/artists/${id}`, {
+    method: 'PUT',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ name }),
   });
-  const data4 = await r4.json();
-  console.log("Artist not found:", data4);
+  const data = await response.json();
+  return data;
+}
+
+async function deleteArtist(id) {
+  const response = await fetch(`http://localhost:3000/api/artists/${id}`, {
+    method: 'DELETE',
+  });
+  const data = await response.json();
+  return data;
+}
+
+
+async function main() {
+  const artists = await getAllArtists();
+  console.log("All artists:", artists);
+
+  const newArtist = await createArtist('Taylor Swift');
+  console.log("New artist created:", newArtist);
+
+  const artist = await getArtistById(newArtist.id);
+  console.log("New artist: found", artist);
+
+  const updatedArtist = await updateArtist(newArtist.id, 'Taylor Swifter');
+  console.log("Artist updated:", updatedArtist);
+
+  const deletedArtist = await deleteArtist(newArtist.id);
+  console.log("Artist deleted:", deletedArtist);
 }
 
 main();
