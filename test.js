@@ -93,6 +93,12 @@ async function getAllAlbums() {
     return data;
 }
 
+async function getAllPlaylists() {
+    const response = await fetch('http://localhost:3000/api/playlists');
+    const data = await response.json();
+    return data;
+}
+
 async function main() {
     const artists = await getAllArtists();
     console.log("All artists:", artists);
@@ -102,7 +108,10 @@ async function main() {
     console.log("--------------------------------");
     const songs = await getAllSongs();
     console.log("All songs:", songs);
-
+    console.log("--------------------------------");
+    const playlists = await getAllPlaylists();
+    console.log("All playlists:", playlists);
+    console.log("--------------------------------");
     // const newArtist = await createArtist('Taylor Swift');
     // console.log("New artist created:", newArtist);
 
