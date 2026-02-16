@@ -19,4 +19,16 @@ const albumSchema = new mongoose.Schema({
     },
 }, { timestamps: true });
 
+albumSchema.pre('save', function(next) {
+    if(!this.isNew && this.isModified('artist')) {
+        return next(new Error('Artist cannot be changed'));
+    }
+    next();
+});
+albumSchema.pre('findOneAndUpdate', function(next) {
+    if(this.isModified('artist')) {
+        return next(new Error('Artist cannot be changed'));
+    }
+    next();
+});
 export const Album = mongoose.model('Album', albumSchema);
