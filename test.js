@@ -91,14 +91,14 @@ async function main() {
     const artists = await getAllArtists();
     console.log("All artists:", artists);
 
-    const newArtist = await createArtist('Taylor Swift');
-    console.log("New artist created:", newArtist);
+    // const newArtist = await createArtist('Taylor Swift');
+    // console.log("New artist created:", newArtist);
 
-    const artist = await getArtistById(newArtist.id);
-    console.log("New artist: found", artist);
+    // const artist = await getArtistById(newArtist.id);
+    // console.log("New artist: found", artist);
 
-    const updatedArtist = await updateArtist(newArtist.id, 'Taylor Swifter');
-    console.log("Artist updated:", updatedArtist);
+    // const updatedArtist = await updateArtist(newArtist.id, 'Taylor Swifter');
+    // console.log("Artist updated:", updatedArtist);
 
 
 
@@ -107,20 +107,20 @@ async function main() {
     const songs = await getAllSongs();
     console.log("All songs:", songs);
 
-    const newSong = await createSong('Bad blood', updatedArtist.id);
-    console.log("New song created:", newSong);
+    // const newSong = await createSong('Bad blood', updatedArtist.id);
+    // console.log("New song created:", newSong);
 
-    const song = await getSongById(newSong.id);
-    console.log("New song: found", song);
+    // const song = await getSongById(newSong.id);
+    // console.log("New song: found", song);
 
-    const updatedSong = await updateSong(newSong.id, 'Bad bloodier', updatedArtist.id);
-    console.log("Song updated:", updatedSong);
+    // const updatedSong = await updateSong(newSong.id, 'Bad bloodier', updatedArtist.id);
+    // console.log("Song updated:", updatedSong);
 
-    const deletedSong = await deleteSong(newSong.id);
-    console.log("Song deleted:", deletedSong);
+    // const deletedSong = await deleteSong(newSong.id);
+    // console.log("Song deleted:", deletedSong);
 
-    const deletedArtist = await deleteArtist(newArtist.id);
-    console.log("Artist deleted:", deletedArtist);
+    // const deletedArtist = await deleteArtist(newArtist.id);
+    // console.log("Artist deleted:", deletedArtist);
 
     console.log("--------------------------------");
 }

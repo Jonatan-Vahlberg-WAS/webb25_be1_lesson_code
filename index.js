@@ -1,11 +1,14 @@
 import dotenv from 'dotenv';
 import express from 'express';
 import cors from 'cors';
+import { connectToDb, disconnectFromDb } from './db/connection.js';
+
 
 dotenv.config();
 
 import artistsRouter from './routes/artists.js';
 import songsRouter from './routes/songs.js';
+import seedIfEmpty from './scripts/seed.js';
 
 const app = express();
 
@@ -22,6 +25,12 @@ app.get('/', (req, res) => {
 app.use('/api/artists', artistsRouter);
 app.use('/api/songs', songsRouter);
 
-app.listen(port, () => {
-  console.log(`Servern körs på port ${port}`);
+connectToDb().then(async () => {
+  await seedIfEmpty();
+  app.listen(port, () => {
+    console.log(`Servern körs på port ${port}`);
+  });
+}).catch((err) => {
+  disconnectFromDb();
+  throw new Error('Failed to connect to MongoDB');
 });
