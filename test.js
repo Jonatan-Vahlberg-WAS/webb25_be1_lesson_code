@@ -43,6 +43,49 @@ async function deleteArtist(id) {
   return data;
 }
 
+async function getAllSongs() {
+  const response = await fetch('http://localhost:3000/api/songs');
+  const data = await response.json();
+  return data;
+}
+
+async function createSong(title, artist) {
+  const response = await fetch('http://localhost:3000/api/songs', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ title, artist }),
+  });
+  const data = await response.json();
+  return data;
+}
+
+async function getSongById(id) {
+  const response = await fetch(`http://localhost:3000/api/songs/${id}`);
+  const data = await response.json();
+  return data;
+}
+
+async function updateSong(id, title, artist) {
+  const response = await fetch(`http://localhost:3000/api/songs/${id}`, {
+    method: 'PUT',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ title, artist }),
+  });
+  const data = await response.json();
+  return data;
+}
+
+async function deleteSong(id) {
+  const response = await fetch(`http://localhost:3000/api/songs/${id}`, {
+    method: 'DELETE',
+  });
+  const data = await response.json();
+  return data;
+}
 
 async function main() {
   const artists = await getAllArtists();
@@ -59,6 +102,25 @@ async function main() {
 
   const deletedArtist = await deleteArtist(newArtist.id);
   console.log("Artist deleted:", deletedArtist);
+
+  console.log("--------------------------------");
+
+  const songs = await getAllSongs();
+  console.log("All songs:", songs);
+
+  const newSong = await createSong('Bad Habits', 'Ed Sheeran');
+  console.log("New song created:", newSong);
+  
+  const song = await getSongById(newSong.id);
+  console.log("New song: found", song);
+
+  const updatedSong = await updateSong(newSong.id, 'Bad Habits - The Eras Tour', 'Ed Sheeran');
+  console.log("Song updated:", updatedSong);
+
+  const deletedSong = await deleteSong(newSong.id);
+  console.log("Song deleted:", deletedSong);
+
+  console.log("--------------------------------");
 }
 
 main();
