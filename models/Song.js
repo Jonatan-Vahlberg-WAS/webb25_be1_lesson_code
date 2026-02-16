@@ -35,35 +35,34 @@ const songSchema = new mongoose.Schema({
         required: false,
         default: null,
     },
+    genres: {
+        type: [String],
+        required: false,
+        enum: ['rock', 'pop', 'hip-hop', 'electronic', 'country', 'latin', 'jazz', 'blues', 'soul', 'funk', 'reggae', 'salsa', 'merengue', 'samba', 'bossa nova', 'latin jazz', 'latin soul', 'latin funk', 'latin salsa', 'latin merengue', 'latin samba', 'latin bossa nova', 'latin latin jazz', 'latin latin soul', 'latin latin funk', 'latin latin salsa', 'latin latin merengue', 'latin latin samba', 'latin latin bossa nova'],
+    },
 }, { timestamps: true, toJSON: { virtuals: true }, toObject: { virtuals: true } });
 
 songSchema.virtual('artistName').get(function() {
     return this.artist?.name ?? null;
 });
 
-/** Pre-save and pre-update hooks to prevent artist and album changes */
-songSchema.pre('save', function(next) {
-    if(!this.isNew && this.isModified('artist')) {
-        return next(new Error('Artist cannot be changed'));
+/** Pre-save hooks to prevent artist and album changes */
+songSchema.pre('save', function() {
+    if (!this.isNew && this.isModified('artist')) {
+        throw new Error('Artist cannot be changed');
     }
-    next();
 });
 
-// Make sure album has same artist as song
-songSchema.pre('save', async function(next) {
-    if(!this.album) {
-        return next()
-    }
+songSchema.pre('save', async function() {
+    if (!this.album) return;
     const album = await Album.findById(this.album);
-    if(this.artist !== album?.artist) {
-        return next(new Error('Album must have same artist as song'));
+    if (album && !this.artist.equals(album.artist)) {
+        throw new Error('Album must have same artist as song');
     }
-    next();
 });
 
-songSchema.pre(["find", "findOne"], function(next) {
+songSchema.pre(["find", "findOne"], function() {
     this.populate('artist').populate('album');
-    next();
 });
 
 export const Song = mongoose.model('Song', songSchema);

@@ -1,5 +1,6 @@
 import mongoose from 'mongoose';
 import { Song } from './Song.js';
+import { Album } from './Album.js';
 
 const artistSchema = new mongoose.Schema({
     name: { 
