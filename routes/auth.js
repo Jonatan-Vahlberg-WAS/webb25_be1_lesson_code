@@ -1,5 +1,6 @@
 import { Router } from "express";
 import User from "../models/User.js";
+import { generateAccessToken, verifyAccessToken } from "../utils/tokens.js";
 
 const router = Router();
 
@@ -27,13 +28,14 @@ router.post("/register", async (req, res) => {
 
     await user.save();
 
-    res.status(201).json({
-      id: user._id,
-      username: user.username,
-      email: user.email
-    });
+    const accessToken = generateAccessToken(user.id);
 
-  } catch {
+    const userObj = user.toObject();
+    delete userObj.password;
+
+    res.status(201).json({ accessToken, user: userObj });
+  } catch (error) {
+    console.error(error);
     res.status(500).json({ message: "Server error" });
   }
 });
@@ -63,15 +65,43 @@ router.post("/login", async (req, res) => {
       return invalid();
     }
 
+    const accessToken = generateAccessToken(user.id);
+
+    const userObj = user.toObject();
+    delete userObj.password;
+
     // Lyckad login: returnera minimalt och säkert
-    return res.json({
-      id: user._id,
-      username: user.username,
-      email: user.email
-    });
+    return res.json({ accessToken, user: userObj });
   } catch {
     // Även vid serverfel: returnera inte detaljer som kan hjälpa angripare
     return res.status(401).json({ message: "User credentials are invalid" });
+  }
+});
+
+router.get("/me", async (req, res) => {
+  const invalid = () => res.status(401).json({ message: "Unauthorized" });
+  try {
+    const token = req.headers.authorization?.split(" ")[1];
+    if (!token) {
+      throw new Error("Unauthorized");
+    }
+
+    const decoded = verifyAccessToken(token);
+    if (!decoded) {
+      throw new Error("Unauthorized");
+    }
+    const user = await User.findById(decoded.userId);
+    if (!user) {
+      throw new Error("Unauthorized");
+    }
+
+    const userObj = user.toObject();
+    delete userObj.password;
+
+    return res.json(userObj);
+  } catch (error) {
+    console.error(error);
+    return invalid();
   }
 });
 
