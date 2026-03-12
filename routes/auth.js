@@ -1,6 +1,6 @@
 import { Router } from "express";
 import User from "../models/User.js";
-import { generateAccessToken, verifyAccessToken } from "../utils/tokens.js";
+import { generateAccessToken, generateRefreshToken, verifyAccessToken, verifyRefreshToken } from "../utils/tokens.js";
 
 const router = Router();
 
@@ -29,11 +29,12 @@ router.post("/register", async (req, res) => {
     await user.save();
 
     const accessToken = generateAccessToken(user.id);
+    const refreshToken = generateRefreshToken(user.id);
 
     const userObj = user.toObject();
     delete userObj.password;
 
-    res.status(201).json({ accessToken, user: userObj });
+    res.status(201).json({ accessToken, refreshToken, user: userObj });
   } catch (error) {
     console.error(error);
     res.status(500).json({ message: "Server error" });
@@ -66,12 +67,13 @@ router.post("/login", async (req, res) => {
     }
 
     const accessToken = generateAccessToken(user.id);
+    const refreshToken = generateRefreshToken(user.id);
 
     const userObj = user.toObject();
     delete userObj.password;
 
     // Lyckad login: returnera minimalt och säkert
-    return res.json({ accessToken, user: userObj });
+    return res.json({ accessToken, refreshToken, user: userObj });
   } catch {
     // Även vid serverfel: returnera inte detaljer som kan hjälpa angripare
     return res.status(401).json({ message: "User credentials are invalid" });
@@ -87,6 +89,7 @@ router.get("/me", async (req, res) => {
     }
 
     const decoded = verifyAccessToken(token);
+
     if (!decoded) {
       throw new Error("Unauthorized");
     }
@@ -105,6 +108,27 @@ router.get("/me", async (req, res) => {
   }
 });
 
+router.post("/refresh", async (req, res) => {
+  const invalid = () => res.status(401).json({ message: "Unauthorized" });
+  try {
+    const { refreshToken } = req.body;
+    if (!refreshToken) {
+      throw new Error("Unauthorized");
+    }
+    const decoded = verifyRefreshToken(refreshToken);
+    if (!decoded) {
+      throw new Error("Unauthorized");
+    }
+    const user = await User.findById(decoded.userId);
+    if (!user) {
+      throw new Error("Unauthorized");
+    }
+    const accessToken = generateAccessToken(user.id);
+    return res.json({ accessToken });
+  } catch {
+    return invalid();
+  }
+});
 
 
 export default router;
