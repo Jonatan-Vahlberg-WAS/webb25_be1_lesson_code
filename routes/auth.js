@@ -38,5 +38,43 @@ router.post("/register", async (req, res) => {
   }
 });
 
+router.post("/login", async (req, res) => {
+  try {
+    const { email, password } = req.body;
+
+    // Generellt felmeddelande som alltid används vid misslyckad login
+    const invalid = () =>
+      res.status(401).json({ message: "User credentials are invalid" });
+
+    if (!email || !password) {
+      return invalid();
+    }
+
+    // password är select:false, så vi måste explicit hämta det
+    const user = await User.findOne({ email: email.toLowerCase() }).select("+password");
+
+    if (!user) {
+      return invalid();
+    }
+
+    const isMatch = await user.comparePassword(password);
+
+    if (!isMatch) {
+      return invalid();
+    }
+
+    // Lyckad login: returnera minimalt och säkert
+    return res.json({
+      id: user._id,
+      username: user.username,
+      email: user.email
+    });
+  } catch {
+    // Även vid serverfel: returnera inte detaljer som kan hjälpa angripare
+    return res.status(401).json({ message: "User credentials are invalid" });
+  }
+});
+
+
 
 export default router;
