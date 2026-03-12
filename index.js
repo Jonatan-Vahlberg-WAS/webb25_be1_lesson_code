@@ -10,6 +10,7 @@ import artistsRouter from './routes/artists.js';
 import songsRouter from './routes/songs.js';
 import albumsRouter from './routes/albums.js';
 import playlistsRouter from './routes/playlists.js';
+import authRouter from './routes/auth.js';
 
 import seedIfEmpty from './scripts/seed.js';
 
@@ -29,6 +30,7 @@ app.use('/api/artists', artistsRouter);
 app.use('/api/songs', songsRouter);
 app.use('/api/albums', albumsRouter);
 app.use('/api/playlists', playlistsRouter);
+app.use('/auth', authRouter);
 
 connectToDb().then(async () => {
   await seedIfEmpty();
